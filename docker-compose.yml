@@ -5,7 +5,9 @@ services:
     image: docker:dind
     container_name: dind
     networks:
-      - jenkins
+      jenkins:
+        aliases: 
+          - docker
     privileged: true
     user: root
     environment:
